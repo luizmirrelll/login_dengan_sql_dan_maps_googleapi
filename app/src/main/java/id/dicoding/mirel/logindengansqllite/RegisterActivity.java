@@ -41,10 +41,10 @@ public class RegisterActivity extends AppCompatActivity {
                 String fGmail = regGmail.getText().toString().trim();
                 String fPassword = regPassword.getText().toString().trim();
                 if (fname.isEmpty() || fPassword.isEmpty() || fGmail.isEmpty() || fPhone.isEmpty()) {
-                    Toast.makeText(RegisterActivity.this, "Please fill all the details", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "JANGAN ADA YANG KOSONG", Toast.LENGTH_SHORT).show();
                 } else {
                 insertData(fname,fPhone,fGmail,fPassword);
-                Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Registrasi kamu sukses", Toast.LENGTH_SHORT).show();
             }
             }
         });

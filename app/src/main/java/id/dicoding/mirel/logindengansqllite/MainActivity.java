@@ -41,16 +41,16 @@ public class MainActivity extends AppCompatActivity {
                 String email = etLoginGmail.getText().toString().trim();
                 String password = etLoginPassword.getText().toString().trim();
                 if (email.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Enter your Email and Password to login", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "ISI EMAIL DAN PASSWORD DENGAN BENAR", Toast.LENGTH_SHORT).show();
                 } else {
                     cursor = db.rawQuery("SELECT *FROM " + DatabaseHelper.TABLE_NAME + " WHERE " + DatabaseHelper.COL_4 + "=? AND " + DatabaseHelper.COL_5 + "=?", new String[]{email, password});
                     if (cursor != null) {
                         if (cursor.getCount() > 0) {
                             startActivity(new Intent(MainActivity.this, LoginSucess.class));
-                            Toast.makeText(getApplicationContext(), "Login sucess", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), " yee login sukses", Toast.LENGTH_SHORT).show();
 
                         } else {
-                            Toast.makeText(getApplicationContext(), "Login error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "kesalahan login", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
